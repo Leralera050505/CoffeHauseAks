@@ -1,0 +1,51 @@
+﻿<Window x:Class="CoffeHause.Windows.RegWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CoffeHause.Windows"
+        mc:Ignorable="d"
+        Title="RegWindow" Height="750" Width="650">
+    <Grid Background="#483233">
+
+        <StackPanel>
+            <TextBlock
+                Text="Авторизация"
+                Margin="0 60 0 0"
+                FontSize="50"
+                HorizontalAlignment="Center" Foreground="#FFD5AA72"
+                />
+            <TextBlock
+                Text="Логин"
+                Margin="120,40,400,0"
+                FontSize="24"
+                HorizontalAlignment="Center" Width="116" Foreground="#FFD5AA72"
+                />
+            <TextBox Name="TbLogin"
+                Margin="0"
+                     Width="400"
+                     Height="40"
+                     FontSize="24"/>
+            <TextBlock
+                Text="Пароль"
+                FontSize="24"
+                Margin="120,40,400,0" Foreground="#FFD5AA72"
+                />
+            <TextBox x:Name="TbPassword"
+                Margin="0"
+                     Width="400"
+                     Height="40"
+                     FontSize="24"/>
+            <Button x:Name="BtnAuth"
+                    Content="Авторизироваться"
+                    FontSize="30"
+                    Margin="100 90" Foreground="#FF4C2818" Background="#FFAA8C77" Click="BtnAuth_Click"/>
+            <TextBlock 
+                x:Name="txtReg"
+                Text="Нет аккаунта? Зарегистрироваться"
+                HorizontalAlignment="Center"
+                FontSize="20"
+                Foreground="AliceBlue" MouseLeftButtonUp="txtReg_MouseLeftButtonUp"/>
+        </StackPanel>
+    </Grid>
+</Window>

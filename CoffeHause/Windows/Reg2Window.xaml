@@ -1,0 +1,109 @@
+﻿<Window x:Class="CoffeHause.Windows.Reg2Window"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CoffeHause.Windows"
+        mc:Ignorable="d"
+        Title="RegWindow" Height="750" Width="650">
+    <Grid Background="#483233">
+        <Image x:Name="___CoffeHause_component_klipartz_com_png"
+               Margin="0,422,443,10.5"
+               Source="/CoffeHause;component/Res/klipartz.com.png"
+               Stretch="Fill"/>
+        <StackPanel>
+            <TextBlock
+                Text="Регистрация"
+                Margin="0 20 0 0"
+                FontSize="50"
+                HorizontalAlignment="Center" Foreground="#FFD5AA72"
+                />
+            <TextBlock
+                Text="Фамилия"
+                Margin="120,30,400,0"
+                FontSize="24"
+                HorizontalAlignment="Center" Width="116" Foreground="#FFD5AA72"
+                />
+            <TextBox x:Name="TbLastName" 
+                Margin="0"
+                     Width="400"
+                     Height="40"
+                     FontSize="24"/>
+            <TextBlock
+                x:Name="TbNAme"
+                Text="Имя"
+                Margin="120,0,400,0"
+                FontSize="24"
+                HorizontalAlignment="Center" Width="116" Foreground="#FFD5AA72"
+                />
+            <TextBox Margin="0"
+                     Width="400"
+                     Height="40"
+                     FontSize="24"/>
+            <TextBlock
+                x:Name="TbPatronymic"
+                Text="Отчество"
+                Margin="120,0,400,0"
+                FontSize="24"
+                HorizontalAlignment="Center" Width="116" Foreground="#FFD5AA72"
+                />
+            <TextBox Margin="0"
+                     Width="400"
+                     Height="40"
+                     FontSize="24"/>
+            <TextBlock
+               
+                Text="Телефон"
+                FontSize="24"
+                Margin="120,0,400,0" Foreground="#FFD5AA72"
+                />
+            <TextBox  x:Name="TbPhone"
+                Margin="0"
+                     Width="400"
+                     Height="40"
+                     FontSize="24"/>
+            <TextBlock
+                Text="Пол"
+                FontSize="24"
+                Margin="120,0,400,0" Foreground="#FFD5AA72"
+                />
+            <ComboBox
+                 x:Name="CbGender"
+                      Margin="0"
+                     Width="400"
+                     Height="40"
+                     FontSize="24"
+                />
+            <TextBlock
+                Text="Логин"
+                FontSize="24"
+                Margin="120,0,400,0" Foreground="#FFD5AA72"
+                />
+            
+            <TextBox x:Name="TbLogin"
+                     Margin="0"
+                     Width="400"
+                     Height="40"
+                     FontSize="24"/>
+            <TextBlock
+                Text="Пароль"
+                FontSize="24"
+                Margin="120,0,400,0" Foreground="#FFD5AA72"
+                />
+
+            <TextBox x:Name="TbPassword"
+                     Margin="0"
+                     Width="400"
+                     Height="40"
+                     FontSize="24"/>
+            <Button x:Name="BtnAuth"
+                    Content="Зарегистрироваться"
+                    FontSize="30"
+                    Margin="100 40" Foreground="#FF4C2818"
+                    Background="#FFAA8C77" Click="BtnAuth_Click"/>
+            
+        </StackPanel>
+       
+
+    </Grid>
+</Window>
