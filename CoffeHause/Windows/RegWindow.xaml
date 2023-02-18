@@ -13,7 +13,8 @@
                 Text="Авторизация"
                 Margin="0 60 0 0"
                 FontSize="50"
-                HorizontalAlignment="Center" Foreground="#FFD5AA72"
+                HorizontalAlignment="Center" 
+                Foreground="#FFD5AA72"
                 />
             <TextBlock
                 Text="Логин"
