@@ -1,3 +1,4 @@
+
 # CoffeHauseAks
 
 <h1> 3ИСП9-14 Белоус, Аксютова /Кофейня </h1>
@@ -24,4 +25,6 @@
 
 <b> Окно просмотра товаров</b>
 ![image](https://user-images.githubusercontent.com/107068589/220346656-f18fe0cc-d457-4335-a102-6e837881367f.png)
+
+"# CoffeHauseAks" 
 

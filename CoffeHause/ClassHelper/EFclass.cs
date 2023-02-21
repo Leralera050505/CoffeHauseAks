@@ -10,6 +10,6 @@ namespace CoffeHause.ClassHelper
 {
     public class EFclass
     {
-        public static Entities Contex { get; } = new Entities();
+        public static CoffeHouse_BelAksEntities Contex { get; } = new CoffeHouse_BelAksEntities();
     }
 }

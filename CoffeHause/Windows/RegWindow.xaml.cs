@@ -48,5 +48,16 @@ namespace CoffeHause.Windows
             reg2.Show();
             this.Close();
         }
+
+        private void txtReg_MouseEnter(object sender, MouseEventArgs e)
+        {
+            var bc = new BrushConverter();
+            txtReg.Foreground = (Brush)bc.ConvertFrom("#FFD5AA72");
+        }
+
+        private void txtReg_MouseLeave(object sender, MouseEventArgs e)
+        {
+            txtReg.Foreground = Brushes.White;
+        }
     }
 }

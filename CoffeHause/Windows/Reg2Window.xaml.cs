@@ -53,19 +53,40 @@ namespace CoffeHause.Windows
             }
 
             DB.Client client = new DB.Client();
+            DB.LoginPassword loginPassword = new DB.LoginPassword();
             client.LastName = TbLastName.Text;
             client.FirstName = TbNAme.Text;
             client.Patronymic = TbPatronymic.Text;
             client.IdGender = (CbGender.SelectedItem as DB.Gender).IdGender;
             client.Phone = TbPhone.Text;
+            loginPassword.Login = TbLogin.Text;
+            loginPassword.Password = TbPassword.Text;
+
+            Contex.LoginPassword.Add(loginPassword);
             client.Login = TbLogin.Text;
-            User.Login = TbLogin.Text;
-            User.Password = TbPassword.Text;
+            Contex.Client.Add(client);
+            Contex.SaveChanges();
+            MessageBox.Show("Добавление прошло успешно");
 
+        }
 
-            Contex.Client.Add(Client);
+        private void TextBlock_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+            RegWindow regWindow = new RegWindow();
+            regWindow.Show();
+            this.Close();
+        }
 
+        private void txtAuth_MouseEnter(object sender, MouseEventArgs e)
+        {
+            var tc = new BrushConverter();
+            txtAuth.Foreground = (Brush)tc.ConvertFrom("#FFD5AA72");
 
+        }
+
+        private void txtAuth_MouseLeave(object sender, MouseEventArgs e)
+        {
+            txtAuth.Foreground = Brushes.White;
         }
     }
 }

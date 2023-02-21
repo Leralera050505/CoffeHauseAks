@@ -23,6 +23,7 @@ namespace CoffeHause.DB
         public int IdProduct { get; set; }
         public string NameProduct { get; set; }
         public decimal Cost { get; set; }
+        public byte[] Photo { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<SaleProduct> SaleProduct { get; set; }
