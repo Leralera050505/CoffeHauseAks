@@ -33,8 +33,15 @@ namespace CoffeHause.Windows
 
         private void btnMenu_Click(object sender, RoutedEventArgs e)
         {
-            MenuWindow menuWindow = new MenuWindow();
-            menuWindow.Show();
+            ProdListWindow prodListWindow = new ProdListWindow();
+            prodListWindow.Show();
+            this.Close();
+        }
+
+        private void btnReg_Click(object sender, RoutedEventArgs e)
+        {
+            Reg2Window reg2Window = new Reg2Window();
+            reg2Window.Show();
             this.Close();
         }
     }

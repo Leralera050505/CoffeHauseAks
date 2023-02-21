@@ -14,7 +14,10 @@ using System.Windows.Shapes;
 
 using System.IO;
 using CoffeHause.DB;
-
+using static Microsoft.Win32.OpenFileDialog;
+using Microsoft.Win32;
+using CoffeHause.ClassHelper;
+using static CoffeHause.ClassHelper.EFclass;
 
 namespace CoffeHause.Windows
 {
@@ -23,6 +26,7 @@ namespace CoffeHause.Windows
     /// </summary>
     public partial class AddEditProduct : Window
     {
+        string pathPhoto;
         public AddEditProduct()
         {
             InitializeComponent();
@@ -33,6 +37,23 @@ namespace CoffeHause.Windows
             Product product = new Product();
             product.NameProduct = TbProductName.Text;
             product.Cost = Convert.ToDecimal(TbProductCost.Text);
+            product.Photo = File.ReadAllBytes(pathPhoto);
+
+
+            Contex.Product.Add(product);
+            Contex.SaveChanges();
+            MessageBox.Show("Добавление прошло успешно");
+        }
+
+        private void btnselect_Click(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog OFD = new OpenFileDialog();
+            if(OFD.ShowDialog() == true)
+            {
+                ProductImg.Source = new BitmapImage(new Uri(OFD.FileName));
+
+                pathPhoto = OFD.FileName;
+            }
         }
     }
 }

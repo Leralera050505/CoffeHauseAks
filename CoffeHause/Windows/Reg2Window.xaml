@@ -5,10 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CoffeHause.Windows"
         mc:Ignorable="d"
-        Title="RegWindow" Height="750" Width="650">
+        Title="RegWindow" Height="800" Width="650">
     <Grid Background="#483233">
         <Image x:Name="___CoffeHause_component_klipartz_com_png"
-               Margin="0,422,443,10.5"
+               Margin="0,487,443,10"
                Source="/CoffeHause;component/Res/klipartz.com.png"
                Stretch="Fill"/>
         <StackPanel>
@@ -16,7 +16,8 @@
                 Text="Регистрация"
                 Margin="0 20 0 0"
                 FontSize="50"
-                HorizontalAlignment="Center" Foreground="#FFD5AA72"
+                HorizontalAlignment="Center"
+                Foreground="#FFD5AA72"
                 />
             <TextBlock
                 Text="Фамилия"
@@ -28,10 +29,9 @@
                 Margin="0"
                      Width="400"
                      Height="40"
-                     FontSize="24"
-                     Text="test"/>
+                     FontSize="24"/>
             <TextBlock
-                x:Name="TbNAme"
+                
                 Text="Имя"
                 Margin="120,0,400,0"
                 FontSize="24"
@@ -41,19 +41,19 @@
                      Width="400"
                      Height="40"
                      FontSize="24"
-                     Text="test"/>
+                     x:Name="TbNAme"/>
             <TextBlock
-                x:Name="TbPatronymic"
                 Text="Отчество"
                 Margin="120,0,400,0"
                 FontSize="24"
                 HorizontalAlignment="Center" Width="116" Foreground="#FFD5AA72"
                 />
-            <TextBox Margin="0"
+            <TextBox 
+                x:Name="TbPatronymic"
+                Margin="0"
                      Width="400"
                      Height="40"
-                     FontSize="24"
-                     Text="test"/>
+                     FontSize="24"/>
             <TextBlock
                
                 Text="Телефон"
@@ -64,8 +64,7 @@
                 Margin="0"
                      Width="400"
                      Height="40"
-                     FontSize="24"
-                      Text="88005553535"/>
+                     FontSize="24"/>
             <TextBlock
                 Text="Пол"
                 FontSize="24"
@@ -88,8 +87,7 @@
                      Margin="0"
                      Width="400"
                      Height="40"
-                     FontSize="24"
-                     Text="test"/>
+                     FontSize="24"/>
             <TextBlock
                 Text="Пароль"
                 FontSize="24"
@@ -100,14 +98,20 @@
                      Margin="0"
                      Width="400"
                      Height="40"
-                     FontSize="24"
-                     Text="test"/>
+                     FontSize="24"/>
             <Button x:Name="BtnAuth"
                     Content="Зарегистрироваться"
                     FontSize="30"
-                    Margin="100 40" Foreground="#FF4C2818"
+                    Margin="100 30 100 0" Foreground="#FF4C2818"
                     Background="#FFAA8C77" Click="BtnAuth_Click"/>
-            
+            <TextBlock
+                Text="Уже есть аккаунт? Зайти"
+                 Foreground='White'
+                FontSize="20"
+                x:Name="txtAuth"
+                
+                HorizontalAlignment="Center" MouseLeftButtonUp="TextBlock_MouseLeftButtonUp" MouseEnter="txtAuth_MouseEnter" MouseLeave="txtAuth_MouseLeave" />
+
         </StackPanel>
        
 

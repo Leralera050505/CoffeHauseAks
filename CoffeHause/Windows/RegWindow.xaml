@@ -20,7 +20,9 @@
                 Text="Логин"
                 Margin="120,40,400,0"
                 FontSize="24"
-                HorizontalAlignment="Center" Width="116" Foreground="#FFD5AA72"
+                HorizontalAlignment="Center"
+                Width="116"
+                Foreground="#FFD5AA72"
                 />
             <TextBox Name="TbLogin"
                 Margin="0"
@@ -46,7 +48,7 @@
                 Text="Нет аккаунта? Зарегистрироваться"
                 HorizontalAlignment="Center"
                 FontSize="20"
-                Foreground="AliceBlue" MouseLeftButtonUp="txtReg_MouseLeftButtonUp"/>
+                Foreground="AliceBlue" MouseLeftButtonUp="txtReg_MouseLeftButtonUp" MouseEnter="txtReg_MouseEnter" MouseLeave="txtReg_MouseLeave"/>
         </StackPanel>
     </Grid>
 </Window>

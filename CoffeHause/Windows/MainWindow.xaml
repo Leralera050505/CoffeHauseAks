@@ -36,11 +36,12 @@
                />
           
             <Button
+                
                 x:Name="btnReg"
                 Content="Зарегестрироваться"
                 FontSize="25"
                 Width="300"
-                Height="50" Foreground="#FF4C2818" Background="#FFAA8C77"
+                Height="50" Foreground="#FF4C2818" Background="#FFAA8C77" Click="btnReg_Click"
                 />
             <Button x:Name="btnMenu"
                     Content="Меню"
