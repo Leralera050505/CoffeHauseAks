@@ -15,3 +15,13 @@
 ![image](https://user-images.githubusercontent.com/107068589/218984191-05e7fdd6-3a2d-4281-ac3b-bb3e3bab21ae.png)
 ![image](https://user-images.githubusercontent.com/107068589/218985899-c95e9552-e845-4955-b5cc-56372672d286.png)
 
+<b>Ввод данных в бд</b>
+![image](https://user-images.githubusercontent.com/107068589/220342627-d665a008-c51d-4377-a2a1-aa817a41f0bf.png)
+![image](https://user-images.githubusercontent.com/107068589/220342853-72dc3cf3-f3e0-4e63-8585-22aa0cc40e03.png)
+
+![image](https://user-images.githubusercontent.com/107068589/220345135-0e2161f3-7815-4bfc-bad7-85383d563e8b.png)
+![image](https://user-images.githubusercontent.com/107068589/220345817-615a6a79-8816-47e8-9f2a-e3e68984d2f1.png)
+
+<b> Окно просмотра товаров</b>
+![image](https://user-images.githubusercontent.com/107068589/220346656-f18fe0cc-d457-4335-a102-6e837881367f.png)
+
