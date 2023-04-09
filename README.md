@@ -26,5 +26,11 @@
 <b> Окно просмотра товаров</b>
 ![image](https://user-images.githubusercontent.com/107068589/220346656-f18fe0cc-d457-4335-a102-6e837881367f.png)
 
+<b> Меню входа</b>
+![image](https://user-images.githubusercontent.com/107068589/230775030-e7aa0f15-ed89-4484-8460-ddaada0f3172.png)
+<b>Работники</b>
+![image](https://user-images.githubusercontent.com/107068589/230775086-f18bae9c-5a1e-428d-af1b-10e7ea77470d.png)
+<b>Заказ</b>
+![image](https://user-images.githubusercontent.com/107068589/230775119-81f79212-a27b-499f-9757-18d6096f0210.png)
 "# CoffeHauseAks" 
 
