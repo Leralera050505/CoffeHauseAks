@@ -29,8 +29,14 @@
 <b> Меню входа</b>
 ![image](https://user-images.githubusercontent.com/107068589/230775030-e7aa0f15-ed89-4484-8460-ddaada0f3172.png)
 <b>Работники</b>
-![image](https://user-images.githubusercontent.com/107068589/230775571-99d763b8-3e17-46bf-9d6c-93ca1e41bf7a.png)
+![image](https://user-images.githubusercontent.com/107068589/231865561-f4e9ce95-3b18-4a06-8134-460f20c2c467.png
+<b>Добавление работника</b>
+![image](https://user-images.githubusercontent.com/107068589/231868162-f9b8ff19-ce7a-4668-8e2b-66d7c8053644.png)
+![image](https://user-images.githubusercontent.com/107068589/231868428-459728b6-42b8-43d8-a2a5-bca0ac3d5ee0.png)
+<b>Редактирование работника</b>
+![image](https://user-images.githubusercontent.com/107068589/231868790-814686bf-dc77-4d63-a63c-c8f35216237e.png)
+
 <b>Заказ</b>
-![image](https://user-images.githubusercontent.com/107068589/230775585-02e79cfa-0ee1-462d-ae69-414441eceda9.png)
+![image](https://user-images.githubusercontent.com/107068589/231865636-efe17168-b428-4b97-97c3-e8fc3f79e797.png)
 "# CoffeHauseAks" 
 
