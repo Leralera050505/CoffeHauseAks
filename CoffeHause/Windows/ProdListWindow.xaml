@@ -24,7 +24,8 @@
         <ListView Background="#483233"
             x:Name="LVProdList"
                   Grid.Row="2"
-                  ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+                  ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+                   d:ItemsSource="{d:SampleData ItemCount=8}">
             <ListView.ItemsPanel>
                 <ItemsPanelTemplate>
                     <WrapPanel/>
@@ -36,19 +37,20 @@
                             BorderThickness="1"
                             Margin="5"
                             Width="200"
-                            Height="250">
+                            Height="270">
                         <StackPanel>
                             <Image x:Name="DTImage"
                                Height="170"
                                Width="200">
-                                <!--<Image.Source>
+                                <Image.Source>
                                     <Binding Path="Photo">
                                         <Binding.TargetNullValue>
-                                            <ImageSource>D:\CoffeHause\CoffeHause\Res\no_photo.jpg</ImageSource>
+                                            <ImageSource>C:\Users\IMac1\Desktop\CoffeHause\CoffeHause\Res\no_photo.jpg</ImageSource>
                                         </Binding.TargetNullValue>
                                     </Binding>
-                                </Image.Source>-->
+                                </Image.Source>
                             </Image>
+                           
                             <TextBlock
                                 Foreground="#FFD5AA72" Text="{Binding NameProduct}"
                                    FontSize="18"
@@ -58,6 +60,16 @@
                                    FontSize="18"
                                    FontWeight="Bold"
                                    Margin="50 0 0 0"/>
+                            <Button x:Name="BtnAddToCart"
+                                    Width="40"
+                                    Height="40"
+                                    Background="{x:Null}"
+                                    BorderThickness="0"
+                                    HorizontalAlignment="Right"
+                                    FontSize="20"
+                                    Margin="0 0 50 0">
+                                <Image x:Name="___free_icon_add_565761_png" Height="40" Source="/Res/free-icon-add-565761.png" Stretch="Fill" Width="40"/>
+                            </Button>
                         </StackPanel>
                     </Border>
                 </DataTemplate>
