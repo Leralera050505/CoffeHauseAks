@@ -29,7 +29,7 @@ namespace CoffeHause.Windows
         string pathPhoto;
         public AddEditProduct()
         {
-            InitializeComponent();
+            InitializeComponent();//
         }
 
         private void btnAdd_Click(object sender, RoutedEventArgs e)
