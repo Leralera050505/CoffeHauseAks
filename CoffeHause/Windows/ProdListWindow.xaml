@@ -24,7 +24,8 @@
         <ListView Background="#483233"
             x:Name="LVProdList"
                   Grid.Row="2"
-                  ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+                  ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+                   d:ItemsSource="{d:SampleData ItemCount=8}">
             <ListView.ItemsPanel>
                 <ItemsPanelTemplate>
                     <WrapPanel/>
@@ -41,13 +42,13 @@
                             <Image x:Name="DTImage"
                                Height="170"
                                Width="200">
-                                <!--<Image.Source>
+                                <Image.Source>
                                     <Binding Path="Photo">
                                         <Binding.TargetNullValue>
-                                            <ImageSource>D:\CoffeHause\CoffeHause\Res\no_photo.jpg</ImageSource>
+                                            <ImageSource>C:\Users\IMac1\Desktop\CoffeHause\CoffeHause\Res\no_photo.jpg</ImageSource>
                                         </Binding.TargetNullValue>
                                     </Binding>
-                                </Image.Source>-->
+                                </Image.Source>
                             </Image>
                             <TextBlock
                                 Foreground="#FFD5AA72" Text="{Binding NameProduct}"
