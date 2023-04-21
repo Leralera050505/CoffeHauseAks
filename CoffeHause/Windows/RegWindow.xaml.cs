@@ -34,11 +34,18 @@ namespace CoffeHause.Windows
             var Client = Contex.Client.ToList().Where(i => i.Login == TbLogin.Text).FirstOrDefault();
             if ((User != null) && (Worker != null))
             {
-                MessageBox.Show("Worker");
+                //сохраняем пользователя в системе
+                ClassHelper.UserDataClass.Worker = Worker;
+                //Переходим на главную страницу
+                MenuListWindow menuListWindow = new MenuListWindow();
+                menuListWindow.Show();
+                this.Close();
             }
             else if ((User != null) && (Client != null))
             {
-                MessageBox.Show("Client");
+                BasketWindow basketWindow = new BasketWindow();
+                basketWindow.Show();
+                this.Close();
             }
         }
 

@@ -13,10 +13,10 @@ namespace CoffeHause.DB
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class CoffeHouse_BelAksEntities : DbContext
+    public partial class Entitiestr : DbContext
     {
-        public CoffeHouse_BelAksEntities()
-            : base("name=CoffeHouse_BelAksEntities")
+        public Entitiestr()
+            : base("name=Entitiestr")
         {
         }
     

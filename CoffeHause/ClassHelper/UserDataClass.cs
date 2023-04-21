@@ -4,12 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-using CoffeHause.DB;
-
 namespace CoffeHause.ClassHelper
 {
-    public class EFclass
+    internal class UserDataClass
     {
-        public static  Entitiestr Contex { get; } = new  Entitiestr();
+        public static DB.Worker Worker { get; set; }    
     }
 }

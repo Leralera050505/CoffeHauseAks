@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="Хранилище CoffeHouse_BelAksModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="Хранилище CoffeHouse_AksBelTrueModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Client">
           <Key>
             <PropertyRef Name="IdClient" />
@@ -22,7 +22,7 @@
             <PropertyRef Name="IdGender" />
           </Key>
           <Property Name="IdGender" Type="int" Nullable="false" />
-          <Property Name="Gender" Type="nvarchar" MaxLength="1" Nullable="false" />
+          <Property Name="NameGender" Type="nvarchar" MaxLength="1" Nullable="false" />
         </EntityType>
         <EntityType Name="LoginPassword">
           <Key>
@@ -42,7 +42,7 @@
           <Key>
             <PropertyRef Name="IdProduct" />
           </Key>
-          <Property Name="IdProduct" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IdProduct" Type="int" Nullable="false" />
           <Property Name="NameProduct" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Cost" Type="decimal" Precision="10" Scale="2" Nullable="false" />
           <Property Name="Photo" Type="varbinary(max)" />
@@ -70,7 +70,7 @@
           <Key>
             <PropertyRef Name="IdWorker" />
           </Key>
-          <Property Name="IdWorker" Type="int" Nullable="false" />
+          <Property Name="IdWorker" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="FirstName" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="LastName" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Patronymic" Type="nvarchar" MaxLength="50" />
@@ -78,7 +78,7 @@
           <Property Name="IdGender" Type="int" Nullable="false" />
           <Property Name="IdPostWorker" Type="int" Nullable="false" />
         </EntityType>
-        <Association Name="FK_Client_Gender">
+        <Association Name="FK_Client_Gender1">
           <End Role="Gender" Type="Self.Gender" Multiplicity="1" />
           <End Role="Client" Type="Self.Client" Multiplicity="*" />
           <ReferentialConstraint>
@@ -158,7 +158,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_Worker_Gender">
+        <Association Name="FK_Worker_Gender1">
           <End Role="Gender" Type="Self.Gender" Multiplicity="1" />
           <End Role="Worker" Type="Self.Worker" Multiplicity="*" />
           <ReferentialConstraint>
@@ -166,7 +166,7 @@
               <PropertyRef Name="IdGender" />
             </Principal>
             <Dependent Role="Worker">
-              <PropertyRef Name="IdPostWorker" />
+              <PropertyRef Name="IdGender" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -196,7 +196,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="Хранилище CoffeHouse_BelAksModelContainer">
+        <EntityContainer Name="Хранилище CoffeHouse_AksBelTrueModelContainer">
           <EntitySet Name="Client" EntityType="Self.Client" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Gender" EntityType="Self.Gender" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="LoginPassword" EntityType="Self.LoginPassword" Schema="dbo" store:Type="Tables" />
@@ -205,7 +205,7 @@
           <EntitySet Name="Sale" EntityType="Self.Sale" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="SaleProduct" EntityType="Self.SaleProduct" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Worker" EntityType="Self.Worker" Schema="dbo" store:Type="Tables" />
-          <AssociationSet Name="FK_Client_Gender" Association="Self.FK_Client_Gender">
+          <AssociationSet Name="FK_Client_Gender1" Association="Self.FK_Client_Gender1">
             <End Role="Gender" EntitySet="Gender" />
             <End Role="Client" EntitySet="Client" />
           </AssociationSet>
@@ -229,7 +229,7 @@
             <End Role="Sale" EntitySet="Sale" />
             <End Role="SaleProduct" EntitySet="SaleProduct" />
           </AssociationSet>
-          <AssociationSet Name="FK_Worker_Gender" Association="Self.FK_Worker_Gender">
+          <AssociationSet Name="FK_Worker_Gender1" Association="Self.FK_Worker_Gender1">
             <End Role="Gender" EntitySet="Gender" />
             <End Role="Worker" EntitySet="Worker" />
           </AssociationSet>
@@ -242,10 +242,11 @@
             <End Role="Worker" EntitySet="Worker" />
           </AssociationSet>
         </EntityContainer>
-      </Schema></edmx:StorageModels>
+      </Schema>
+    </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="CoffeHouse_BelAksModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <Schema Namespace="CoffeHouse_AksBelTrueModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityType Name="Client">
           <Key>
             <PropertyRef Name="IdClient" />
@@ -257,7 +258,7 @@
           <Property Name="Phone" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Login" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="IdGender" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="Gender" Relationship="Self.FK_Client_Gender" FromRole="Client" ToRole="Gender" />
+          <NavigationProperty Name="Gender" Relationship="Self.FK_Client_Gender1" FromRole="Client" ToRole="Gender" />
           <NavigationProperty Name="LoginPassword" Relationship="Self.FK_Client_LoginPassword" FromRole="Client" ToRole="LoginPassword" />
           <NavigationProperty Name="Sale" Relationship="Self.FK_Sale_Client" FromRole="Client" ToRole="Sale" />
         </EntityType>
@@ -266,9 +267,9 @@
             <PropertyRef Name="IdGender" />
           </Key>
           <Property Name="IdGender" Type="Int32" Nullable="false" />
-          <Property Name="Gender1" Type="String" MaxLength="1" FixedLength="false" Unicode="true" Nullable="false" />
-          <NavigationProperty Name="Client" Relationship="Self.FK_Client_Gender" FromRole="Gender" ToRole="Client" />
-          <NavigationProperty Name="Worker" Relationship="Self.FK_Worker_Gender" FromRole="Gender" ToRole="Worker" />
+          <Property Name="NameGender" Type="String" MaxLength="1" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Client" Relationship="Self.FK_Client_Gender1" FromRole="Gender" ToRole="Client" />
+          <NavigationProperty Name="Worker" Relationship="Self.FK_Worker_Gender1" FromRole="Gender" ToRole="Worker" />
         </EntityType>
         <EntityType Name="LoginPassword">
           <Key>
@@ -325,19 +326,19 @@
           <Key>
             <PropertyRef Name="IdWorker" />
           </Key>
-          <Property Name="IdWorker" Type="Int32" Nullable="false" />
+          <Property Name="IdWorker" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Patronymic" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Login" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="IdGender" Type="Int32" Nullable="false" />
           <Property Name="IdPostWorker" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="Gender" Relationship="Self.FK_Worker_Gender" FromRole="Worker" ToRole="Gender" />
+          <NavigationProperty Name="Gender" Relationship="Self.FK_Worker_Gender1" FromRole="Worker" ToRole="Gender" />
           <NavigationProperty Name="LoginPassword" Relationship="Self.FK_Worker_LoginPassword" FromRole="Worker" ToRole="LoginPassword" />
           <NavigationProperty Name="PostWorker" Relationship="Self.FK_Worker_PostWorker" FromRole="Worker" ToRole="PostWorker" />
           <NavigationProperty Name="Sale" Relationship="Self.FK_Sale_Worker" FromRole="Worker" ToRole="Sale" />
         </EntityType>
-        <Association Name="FK_Client_Gender">
+        <Association Name="FK_Client_Gender1">
           <End Role="Gender" Type="Self.Gender" Multiplicity="1" />
           <End Role="Client" Type="Self.Client" Multiplicity="*" />
           <ReferentialConstraint>
@@ -375,7 +376,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_Worker_Gender">
+        <Association Name="FK_Worker_Gender1">
           <End Role="Gender" Type="Self.Gender" Multiplicity="1" />
           <End Role="Worker" Type="Self.Worker" Multiplicity="*" />
           <ReferentialConstraint>
@@ -383,7 +384,7 @@
               <PropertyRef Name="IdGender" />
             </Principal>
             <Dependent Role="Worker">
-              <PropertyRef Name="IdPostWorker" />
+              <PropertyRef Name="IdGender" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -455,7 +456,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="CoffeHouse_BelAksEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="Entitiestr" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Client" EntityType="Self.Client" />
           <EntitySet Name="Gender" EntityType="Self.Gender" />
           <EntitySet Name="LoginPassword" EntityType="Self.LoginPassword" />
@@ -464,7 +465,7 @@
           <EntitySet Name="Sale" EntityType="Self.Sale" />
           <EntitySet Name="SaleProduct" EntityType="Self.SaleProduct" />
           <EntitySet Name="Worker" EntityType="Self.Worker" />
-          <AssociationSet Name="FK_Client_Gender" Association="Self.FK_Client_Gender">
+          <AssociationSet Name="FK_Client_Gender1" Association="Self.FK_Client_Gender1">
             <End Role="Gender" EntitySet="Gender" />
             <End Role="Client" EntitySet="Client" />
           </AssociationSet>
@@ -476,7 +477,7 @@
             <End Role="Client" EntitySet="Client" />
             <End Role="Sale" EntitySet="Sale" />
           </AssociationSet>
-          <AssociationSet Name="FK_Worker_Gender" Association="Self.FK_Worker_Gender">
+          <AssociationSet Name="FK_Worker_Gender1" Association="Self.FK_Worker_Gender1">
             <End Role="Gender" EntitySet="Gender" />
             <End Role="Worker" EntitySet="Worker" />
           </AssociationSet>
@@ -506,9 +507,9 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="Хранилище CoffeHouse_BelAksModelContainer" CdmEntityContainer="CoffeHouse_BelAksEntities">
+        <EntityContainerMapping StorageEntityContainer="Хранилище CoffeHouse_AksBelTrueModelContainer" CdmEntityContainer="Entitiestr">
           <EntitySetMapping Name="Client">
-            <EntityTypeMapping TypeName="CoffeHouse_BelAksModel.Client">
+            <EntityTypeMapping TypeName="CoffeHouse_AksBelTrueModel.Client">
               <MappingFragment StoreEntitySet="Client">
                 <ScalarProperty Name="IdClient" ColumnName="IdClient" />
                 <ScalarProperty Name="FirstName" ColumnName="FirstName" />
@@ -521,15 +522,15 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Gender">
-            <EntityTypeMapping TypeName="CoffeHouse_BelAksModel.Gender">
+            <EntityTypeMapping TypeName="CoffeHouse_AksBelTrueModel.Gender">
               <MappingFragment StoreEntitySet="Gender">
                 <ScalarProperty Name="IdGender" ColumnName="IdGender" />
-                <ScalarProperty Name="Gender1" ColumnName="Gender" />
+                <ScalarProperty Name="NameGender" ColumnName="NameGender" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="LoginPassword">
-            <EntityTypeMapping TypeName="CoffeHouse_BelAksModel.LoginPassword">
+            <EntityTypeMapping TypeName="CoffeHouse_AksBelTrueModel.LoginPassword">
               <MappingFragment StoreEntitySet="LoginPassword">
                 <ScalarProperty Name="Login" ColumnName="Login" />
                 <ScalarProperty Name="Password" ColumnName="Password" />
@@ -537,7 +538,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="PostWorker">
-            <EntityTypeMapping TypeName="CoffeHouse_BelAksModel.PostWorker">
+            <EntityTypeMapping TypeName="CoffeHouse_AksBelTrueModel.PostWorker">
               <MappingFragment StoreEntitySet="PostWorker">
                 <ScalarProperty Name="IdPostWorker" ColumnName="IdPostWorker" />
                 <ScalarProperty Name="PostWorker1" ColumnName="PostWorker" />
@@ -545,7 +546,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Product">
-            <EntityTypeMapping TypeName="CoffeHouse_BelAksModel.Product">
+            <EntityTypeMapping TypeName="CoffeHouse_AksBelTrueModel.Product">
               <MappingFragment StoreEntitySet="Product">
                 <ScalarProperty Name="IdProduct" ColumnName="IdProduct" />
                 <ScalarProperty Name="NameProduct" ColumnName="NameProduct" />
@@ -555,7 +556,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Sale">
-            <EntityTypeMapping TypeName="CoffeHouse_BelAksModel.Sale">
+            <EntityTypeMapping TypeName="CoffeHouse_AksBelTrueModel.Sale">
               <MappingFragment StoreEntitySet="Sale">
                 <ScalarProperty Name="IdSale" ColumnName="IdSale" />
                 <ScalarProperty Name="IdClient" ColumnName="IdClient" />
@@ -566,7 +567,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="SaleProduct">
-            <EntityTypeMapping TypeName="CoffeHouse_BelAksModel.SaleProduct">
+            <EntityTypeMapping TypeName="CoffeHouse_AksBelTrueModel.SaleProduct">
               <MappingFragment StoreEntitySet="SaleProduct">
                 <ScalarProperty Name="IdSale" ColumnName="IdSale" />
                 <ScalarProperty Name="IdProduct" ColumnName="IdProduct" />
@@ -575,7 +576,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Worker">
-            <EntityTypeMapping TypeName="CoffeHouse_BelAksModel.Worker">
+            <EntityTypeMapping TypeName="CoffeHouse_AksBelTrueModel.Worker">
               <MappingFragment StoreEntitySet="Worker">
                 <ScalarProperty Name="IdWorker" ColumnName="IdWorker" />
                 <ScalarProperty Name="FirstName" ColumnName="FirstName" />

@@ -4,24 +4,24 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="d60fcedc4cb44406bf782209c873d4a2" Name="Diagram1">
-        <EntityTypeShape EntityType="CoffeHouse_BelAksModel.Client" Width="1.5" PointX="3" PointY="4.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="CoffeHouse_BelAksModel.Gender" Width="1.5" PointX="0.75" PointY="4.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="CoffeHouse_BelAksModel.LoginPassword" Width="1.5" PointX="0.75" PointY="1.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="CoffeHouse_BelAksModel.PostWorker" Width="1.5" PointX="3.75" PointY="1" IsExpanded="true" />
-        <EntityTypeShape EntityType="CoffeHouse_BelAksModel.Product" Width="1.5" PointX="8.25" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="CoffeHouse_BelAksModel.Sale" Width="1.5" PointX="8.25" PointY="4.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="CoffeHouse_BelAksModel.SaleProduct" Width="1.5" PointX="10.5" PointY="4.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="CoffeHouse_BelAksModel.Worker" Width="1.5" PointX="6" PointY="4.125" IsExpanded="true" />
-        <AssociationConnector Association="CoffeHouse_BelAksModel.FK_Client_Gender" ManuallyRouted="false" />
-        <AssociationConnector Association="CoffeHouse_BelAksModel.FK_Client_LoginPassword" ManuallyRouted="false" />
-        <AssociationConnector Association="CoffeHouse_BelAksModel.FK_Sale_Client" ManuallyRouted="false" />
-        <AssociationConnector Association="CoffeHouse_BelAksModel.FK_Worker_Gender" ManuallyRouted="false" />
-        <AssociationConnector Association="CoffeHouse_BelAksModel.FK_Worker_LoginPassword" ManuallyRouted="false" />
-        <AssociationConnector Association="CoffeHouse_BelAksModel.FK_Worker_PostWorker" ManuallyRouted="false" />
-        <AssociationConnector Association="CoffeHouse_BelAksModel.FK_SaleProduct_Product" ManuallyRouted="false" />
-        <AssociationConnector Association="CoffeHouse_BelAksModel.FK_Sale_Worker" ManuallyRouted="false" />
-        <AssociationConnector Association="CoffeHouse_BelAksModel.FK_SaleProduct_Sale" ManuallyRouted="false" />
+      <Diagram DiagramId="dc422b7f8c0d42508c7f1e1814ea664a" Name="Diagram1">
+        <EntityTypeShape EntityType="CoffeHouse_AksBelTrueModel.Client" Width="1.5" PointX="3" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="CoffeHouse_AksBelTrueModel.Gender" Width="1.5" PointX="0.75" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="CoffeHouse_AksBelTrueModel.LoginPassword" Width="1.5" PointX="0.75" PointY="1.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="CoffeHouse_AksBelTrueModel.PostWorker" Width="1.5" PointX="3.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="CoffeHouse_AksBelTrueModel.Product" Width="1.5" PointX="8.25" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CoffeHouse_AksBelTrueModel.Sale" Width="1.5" PointX="8.25" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CoffeHouse_AksBelTrueModel.SaleProduct" Width="1.5" PointX="10.5" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CoffeHouse_AksBelTrueModel.Worker" Width="1.5" PointX="6" PointY="4.125" IsExpanded="true" />
+        <AssociationConnector Association="CoffeHouse_AksBelTrueModel.FK_Client_Gender1" ManuallyRouted="false" />
+        <AssociationConnector Association="CoffeHouse_AksBelTrueModel.FK_Client_LoginPassword" ManuallyRouted="false" />
+        <AssociationConnector Association="CoffeHouse_AksBelTrueModel.FK_Sale_Client" ManuallyRouted="false" />
+        <AssociationConnector Association="CoffeHouse_AksBelTrueModel.FK_Worker_Gender1" ManuallyRouted="false" />
+        <AssociationConnector Association="CoffeHouse_AksBelTrueModel.FK_Worker_LoginPassword" ManuallyRouted="false" />
+        <AssociationConnector Association="CoffeHouse_AksBelTrueModel.FK_Worker_PostWorker" ManuallyRouted="false" />
+        <AssociationConnector Association="CoffeHouse_AksBelTrueModel.FK_SaleProduct_Product" ManuallyRouted="false" />
+        <AssociationConnector Association="CoffeHouse_AksBelTrueModel.FK_Sale_Worker" ManuallyRouted="false" />
+        <AssociationConnector Association="CoffeHouse_AksBelTrueModel.FK_SaleProduct_Sale" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
