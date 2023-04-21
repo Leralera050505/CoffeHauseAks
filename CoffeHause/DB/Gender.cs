@@ -22,7 +22,7 @@ namespace CoffeHause.DB
         }
     
         public int IdGender { get; set; }
-        public string Gender1 { get; set; }
+        public string NameGender { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Client> Client { get; set; }

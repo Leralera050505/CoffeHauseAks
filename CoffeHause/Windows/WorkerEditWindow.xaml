@@ -1,0 +1,117 @@
+﻿<Window x:Class="CoffeHause.Windows.WorkerEditWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CoffeHause.Windows"
+        mc:Ignorable="d"
+        Title="WorkerEditWindow" Height="800" Width="650"
+        WindowStartupLocation="CenterScreen">
+    <Grid Background="#483233">
+        <StackPanel>
+            <TextBlock
+                Foreground="#FFD5AA72"
+                Margin="0 20 0 0"
+                Text="Редактирование работника"
+                HorizontalAlignment="Center"
+                FontSize="24"/>
+
+            <TextBlock
+                Foreground="#FFD5AA72"
+                Margin="0 20 0 0"
+                Text="Имя"
+                HorizontalAlignment="Center"
+                FontSize="24"/>
+            <TextBox
+                x:Name="TbName"
+                Background="White"
+                Margin="137 0 137 0"
+                Height="30"
+                Foreground="Black"/>
+            <TextBlock
+                Foreground="#FFD5AA72"
+                Margin="0 20 0 0"
+                Text="Фамилия"
+                HorizontalAlignment="Center"
+                FontSize="24"/>
+            <TextBox
+                x:Name="TbLastName"
+                Background="White"
+                Margin="137 0 137 0"
+                Height="30"/>
+            <TextBlock
+                Foreground="#FFD5AA72"
+                Margin="0 20 0 0"
+                Text="Отчество"
+                HorizontalAlignment="Center"
+                FontSize="24"/>
+            <TextBox
+                x:Name="TbPatronymic"
+                Background="White"
+                Margin="137 0 137 0"
+                Height="30"/>
+            <TextBlock
+                Foreground="#FFD5AA72"
+                Margin="0 20 0 0"
+                Text="Логин"
+                HorizontalAlignment="Center"
+                FontSize="24"/>
+            <TextBox
+                x:Name="TbLogin"
+                Background="White"
+                Margin="137 0 137 0"
+                Height="30"/>
+            <TextBlock
+                Foreground="#FFD5AA72"
+                Margin="0 20 0 0"
+                Text="Пароль"
+                HorizontalAlignment="Center"
+                FontSize="24"/>
+            <TextBox
+                x:Name="TbPassword"
+                Background="White"
+                Margin="137 0 137 0"
+                Height="30"/>
+            <TextBlock
+                Foreground="#FFD5AA72"
+                Margin="0 20 0 0"
+                Text="Должность"
+                HorizontalAlignment="Center"
+                FontSize="24"/>
+            <ComboBox
+                x:Name="CbPost"
+                Background="White"
+                Margin="137 0 137 0"
+                Height="30"/>
+            <TextBlock
+                Foreground="#FFD5AA72"
+                Margin="0 20 0 0"
+                Text="Пол"
+                HorizontalAlignment="Center"
+                FontSize="24"/>
+            <ComboBox
+                x:Name="CbGender"
+                Background="White"
+                Margin="137 0 137 0"
+                Height="30"/>
+            <Button
+                Margin="90,40,90,0"
+                Content="Выйти"
+                FontSize="24"
+                Foreground="#FF4C2818" 
+                Background="#FFAA8C77"
+                Height="40"
+                x:Name="btnExit" Click="btnExit_Click" />
+            <Button
+                Margin="90,10,90,0"
+                Content="Редактировать"
+                FontSize="24"
+                Foreground="#FF4C2818" 
+                Background="#FFAA8C77"
+                Height="40"
+                x:Name="btnEdit" Click="btnEdit_Click" />
+
+        </StackPanel>
+
+    </Grid>
+</Window>

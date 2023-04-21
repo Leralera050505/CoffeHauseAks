@@ -4,12 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-using CoffeHause.DB;
-
 namespace CoffeHause.ClassHelper
 {
-    public class EFclass
+    public class BasketClass
     {
-        public static  Entitiestr Contex { get; } = new  Entitiestr();
+        public static List<DB.Product> Products { get; set; } = new List<DB.Product>();
     }
 }

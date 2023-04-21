@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CoffeHause.Windows"
         mc:Ignorable="d"
-        Title="RegWindow" Height="800" Width="650">
+        Title="RegWindow" Height="800" Width="650"
+        WindowStartupLocation="CenterScreen">
     <Grid Background="#483233">
         <Image x:Name="___CoffeHause_component_klipartz_com_png"
                Margin="0,487,443,10"
