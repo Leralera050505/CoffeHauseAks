@@ -37,7 +37,7 @@
                             BorderThickness="1"
                             Margin="5"
                             Width="200"
-                            Height="250">
+                            Height="270">
                         <StackPanel>
                             <Image x:Name="DTImage"
                                Height="170"
@@ -50,6 +50,7 @@
                                     </Binding>
                                 </Image.Source>
                             </Image>
+                           
                             <TextBlock
                                 Foreground="#FFD5AA72" Text="{Binding NameProduct}"
                                    FontSize="18"
@@ -59,6 +60,16 @@
                                    FontSize="18"
                                    FontWeight="Bold"
                                    Margin="50 0 0 0"/>
+                            <Button x:Name="BtnAddToCart"
+                                    Width="40"
+                                    Height="40"
+                                    Background="{x:Null}"
+                                    BorderThickness="0"
+                                    HorizontalAlignment="Right"
+                                    FontSize="20"
+                                    Margin="0 0 50 0">
+                                <Image x:Name="___free_icon_add_565761_png" Height="40" Source="/Res/free-icon-add-565761.png" Stretch="Fill" Width="40"/>
+                            </Button>
                         </StackPanel>
                     </Border>
                 </DataTemplate>
