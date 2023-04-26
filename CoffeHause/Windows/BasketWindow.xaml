@@ -25,21 +25,19 @@
             x:Name="LVBasket"
                   Grid.Row="2"
                   ScrollViewer.HorizontalScrollBarVisibility="Disabled"
-                  d:ItemsSource="{d:SampleData ItemCount=8}">
-            
+                   d:ItemsSource="{d:SampleData ItemCount=8}">
             <ListView.ItemsPanel>
                 <ItemsPanelTemplate>
                     <WrapPanel/>
                 </ItemsPanelTemplate>
             </ListView.ItemsPanel>
-            
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <Border BorderBrush="#FFAA8C77"
                             BorderThickness="1"
                             Margin="5"
                             Width="200"
-                            Height="250">
+                            Height="270">
                         <StackPanel>
                             <Image x:Name="DTImage"
                                Height="170"
@@ -47,11 +45,12 @@
                                 <Image.Source>
                                     <Binding Path="Photo">
                                         <Binding.TargetNullValue>
-                                            <ImageSource>C:\Users\IMac1\Desktop\CoffeHause\CoffeHause\Res\no_photo.jpg</ImageSource>
+                                            <ImageSource>C:\Users\User\Desktop\CoffeHause\CoffeHause\Res\free-icon-add-565761.png</ImageSource>
                                         </Binding.TargetNullValue>
                                     </Binding>
                                 </Image.Source>
                             </Image>
+
                             <TextBlock
                                 Foreground="#FFD5AA72" Text="{Binding NameProduct}"
                                    FontSize="18"
@@ -61,30 +60,57 @@
                                    FontSize="18"
                                    FontWeight="Bold"
                                    Margin="50 0 0 0"/>
-
-                            <Button x:Name="BtnRemoveToCart"
+                            <WrapPanel >
+                                <Button x:Name="BtnAddToCart"
+                                    Width="40"
+                                    Height="40"
+                                    Background="{x:Null}"
+                                    BorderThickness="0"
+                                    HorizontalAlignment="Left"
+                                    FontSize="20"
+                                    Margin="10 0 40 0"
+                                        Click="BtnAddToCart_Click">
+                                    <Image x:Name="___free_icon_add_565761_png" Height="40" Source="/Res/free-icon-add-565761.png" Stretch="Fill" Width="40"/>
+                                </Button>
+                                <Button x:Name="BtnRemoveToCart"
                                     Width="40"
                                     Height="40"
                                     Background="{x:Null}"
                                     BorderThickness="0"
                                     HorizontalAlignment="Right"
-                                    Margin="0 0 20 0"
-                                    Click ="BtnRemoveToCart_Click"/>
+                                    FontSize="20"
+                                    Margin="60 0 0 0"
+                                        Click="BtnRemoveToCart_Click_1">
+                                    <Image x:Name="pngwing" Height="40" Source="\Res\pngwing.com.png" Stretch="Fill" Width="40"/>
+                                </Button>
+                            </WrapPanel>
+
                         </StackPanel>
                     </Border>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-        <Button x:Name="BtnAddProduct"
-                Grid.Row="3"
-                Width="70"
-                Height="40"
-                HorizontalAlignment="Right"
-                Margin="0 0 20 0"
-                Background="{x:Null}"
-                BorderThickness="0"
-                >
-            <Image Height="40" Source="/Res/kisspng-portable-network-graphics-vector-graphics-photogra-collection-of-free-grunge-vector-arrow-download-o-5cb773c1aa2701.109351091555526593697.jpg" Stretch="Fill" Width="70"/>
-        </Button>
+        <Button
+            Foreground="#FF4C2818"
+            Background="#FFAA8C77"
+            Content="Добавить товар"
+            Grid.Row="2"
+            FontSize="25"
+            x:Name="AddProduct" Margin="0,634,910,0" Grid.RowSpan="2" Click="AddProduct_Click"/>
+        <StackPanel HorizontalAlignment="Right" Grid.Row="3" Orientation="Horizontal">
+            <TextBlock                  
+                Width="200"
+                Text="Цена:"
+                TextAlignment="Right"
+                Padding="0 0 20 0"
+                FontSize="30"
+                   />
+            <TextBlock x:Name="tbAllCost"                   
+                Width="200"
+                Text="0"                
+                FontSize="30"
+                   />
+
+        </StackPanel>
     </Grid>
 </Window>
