@@ -45,7 +45,7 @@
                                 <Image.Source>
                                     <Binding Path="Photo">
                                         <Binding.TargetNullValue>
-                                            <ImageSource>C:\Users\IMac1\Desktop\CoffeHause\CoffeHause\Res\no_photo.jpg</ImageSource>
+                                            <ImageSource>C:\Users\User\Desktop\CoffeHause\CoffeHause\Res\free-icon-add-565761.png</ImageSource>
                                         </Binding.TargetNullValue>
                                     </Binding>
                                 </Image.Source>
