@@ -24,10 +24,15 @@
 ![image](https://user-images.githubusercontent.com/107068589/220345817-615a6a79-8816-47e8-9f2a-e3e68984d2f1.png)
 
 <b> Окно просмотра товаров</b>
-![image](https://user-images.githubusercontent.com/107068589/220346656-f18fe0cc-d457-4335-a102-6e837881367f.png)
+![image](https://user-images.githubusercontent.com/107068589/234857829-c52e03e5-8925-4c25-b32f-5d8de053c69e.png)
 
-<b> Меню входа</b>
+
+<b> Меню входа/ Вход по ролям</b>
 ![image](https://user-images.githubusercontent.com/107068589/230775030-e7aa0f15-ed89-4484-8460-ddaada0f3172.png)
+![image](https://user-images.githubusercontent.com/107068589/234857468-cb6ffeb8-7070-4124-9dbe-8de7ce9a2e5a.png)
+![image](https://user-images.githubusercontent.com/107068589/234857647-d5dc6083-8851-4ef4-bcba-3921831a681f.png)
+
+
 <b>Работники</b>
 ![image](https://user-images.githubusercontent.com/107068589/231865561-f4e9ce95-3b18-4a06-8134-460f20c2c467.png
 <b>Добавление работника</b>
@@ -38,5 +43,14 @@
 
 <b>Заказ</b>
 ![image](https://user-images.githubusercontent.com/107068589/231865636-efe17168-b428-4b97-97c3-e8fc3f79e797.png)
+
+
+![image](https://user-images.githubusercontent.com/107068589/234856026-d9ce06bc-4737-4d23-b9c4-8c2b1975886c.png)
+
+<b>Корзина</b>
+![image](https://user-images.githubusercontent.com/107068589/234858042-b7995284-124e-46c1-ad0c-91a02911aa79.png)
+![image](https://user-images.githubusercontent.com/107068589/234858139-76d2a052-0cc1-490c-a99a-e9b3bf9f8753.png)
+
+
 "# CoffeHauseAks" 
 
