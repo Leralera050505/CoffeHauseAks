@@ -12,7 +12,7 @@
             Margin="10"
             Foreground="#FFAA8C77" 
             x:Name="tbName"
-            Text="Имя/ Должность"
+            Text="Имя / Должность"
             HorizontalAlignment="Right"/>
         <StackPanel HorizontalAlignment="Center"
                     VerticalAlignment="Center">
