@@ -44,9 +44,6 @@
 <b>Заказ</b>
 ![image](https://user-images.githubusercontent.com/107068589/231865636-efe17168-b428-4b97-97c3-e8fc3f79e797.png)
 
-
-![image](https://user-images.githubusercontent.com/107068589/234856026-d9ce06bc-4737-4d23-b9c4-8c2b1975886c.png)
-
 <b>Корзина</b>
 ![image](https://user-images.githubusercontent.com/107068589/234858042-b7995284-124e-46c1-ad0c-91a02911aa79.png)
 ![image](https://user-images.githubusercontent.com/107068589/234858139-76d2a052-0cc1-490c-a99a-e9b3bf9f8753.png)
