@@ -22,6 +22,8 @@
         <AssociationConnector Association="CoffeHouse_AksBelTrueModel.FK_SaleProduct_Product" ManuallyRouted="false" />
         <AssociationConnector Association="CoffeHouse_AksBelTrueModel.FK_Sale_Worker" ManuallyRouted="false" />
         <AssociationConnector Association="CoffeHouse_AksBelTrueModel.FK_SaleProduct_Sale" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="CoffeHouse_AksBelTrueModel.sysdiagrams" Width="1.5" PointX="0.75" PointY="8.75" />
+        <EntityTypeShape EntityType="CoffeHouse_AksBelTrueModel.VW_SaleProduct" Width="1.5" PointX="2.75" PointY="8.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

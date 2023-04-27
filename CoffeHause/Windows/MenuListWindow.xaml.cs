@@ -29,7 +29,7 @@ namespace CoffeHause.Windows
         {
             ProdListWindow prodListWindow = new ProdListWindow();
             this.Hide();
-            prodListWindow.ShowDialog();
+            prodListWindow.Show();
             this.Show();
         }
 
@@ -45,7 +45,15 @@ namespace CoffeHause.Windows
         {
             SaleListWindow saleListWindow = new SaleListWindow();
             this.Hide();
-            saleListWindow.ShowDialog();
+            saleListWindow.Show();
+            this.Show();
+        }
+
+        private void tbReport_Click(object sender, RoutedEventArgs e)
+        {
+            ReportWindow reportWindow = new ReportWindow();
+            this.Hide();
+            reportWindow.Show();
             this.Show();
         }
     }

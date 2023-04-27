@@ -45,7 +45,7 @@
                                 <Image.Source>
                                     <Binding Path="Photo">
                                         <Binding.TargetNullValue>
-                                            <ImageSource>C:\Users\User\Desktop\CoffeHause\CoffeHause\Res\free-icon-add-565761.png</ImageSource>
+                                            <ImageSource>C:\Users\IMac1\Desktop\CoffeHauseAksBel\CoffeHause\Res\no_photo.jpg</ImageSource>
                                         </Binding.TargetNullValue>
                                     </Binding>
                                 </Image.Source>
@@ -68,10 +68,15 @@
                                     BorderThickness="0"
                                     HorizontalAlignment="Left"
                                     FontSize="20"
-                                    Margin="10 0 40 0"
+                                    Margin="0 0 40 0"
                                         Click="BtnAddToCart_Click">
                                     <Image x:Name="___free_icon_add_565761_png" Height="40" Source="/Res/free-icon-add-565761.png" Stretch="Fill" Width="40"/>
                                 </Button>
+                                <TextBlock Text="{Binding Quantity}"
+                                     Foreground="#FFD5AA72"
+                                    x:Name="tbQuantity"
+                                    Width="50"
+                                           FontSize="20"/>
                                 <Button x:Name="BtnRemoveToCart"
                                     Width="40"
                                     Height="40"
@@ -79,8 +84,8 @@
                                     BorderThickness="0"
                                     HorizontalAlignment="Right"
                                     FontSize="20"
-                                    Margin="60 0 0 0"
-                                        Click="BtnRemoveToCart_Click_1">
+                                    Margin="10 0 0 0"
+                                      Click="BtnRemoveToCart_Click_1" >
                                     <Image x:Name="pngwing" Height="40" Source="\Res\pngwing.com.png" Stretch="Fill" Width="40"/>
                                 </Button>
                             </WrapPanel>
@@ -94,9 +99,14 @@
             Foreground="#FF4C2818"
             Background="#FFAA8C77"
             Content="Добавить товар"
-            Grid.Row="2"
+            Grid.Row="3"
             FontSize="25"
-            x:Name="AddProduct" Margin="0,634,910,0" Grid.RowSpan="2" Click="AddProduct_Click"/>
+            x:Name="AddProduct" 
+            Grid.RowSpan="2"
+            Height="50"
+            Width="500"
+            HorizontalAlignment="Left"
+            Click="AddProduct_Click"/>
         <StackPanel HorizontalAlignment="Right" Grid.Row="3" Orientation="Horizontal">
             <TextBlock                  
                 Width="200"

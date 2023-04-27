@@ -38,6 +38,41 @@ namespace CoffeHause.Windows
             AddEditProduct addEditProduct = new AddEditProduct();
             addEditProduct.Show();
             this.Close();
+
+        }
+
+        private void btnBasket_Click(object sender, RoutedEventArgs e)
+        {
+            BasketWindow basketWindow = new BasketWindow();
+            basketWindow.ShowDialog();
+            this.Hide();
+        }
+
+        private void BtnAddToCart_Click(object sender, RoutedEventArgs e)
+        {
+            bool seek = true;
+            Button button = sender as Button;
+            if (button == null)
+            {
+                return;
+            }
+            DB.Product selectedProduct = button.DataContext as DB.Product;
+            if (selectedProduct != null)
+            {
+                for (int i = 0; i < ClassHelper.BasketClass.Products.Count; i++)
+                {
+                    if (ClassHelper.BasketClass.Products[i] == selectedProduct)
+                    {
+                        ClassHelper.BasketClass.Products[i].Quantity++;
+                        seek = false;
+                    }
+                }
+                if(seek)
+                {
+                    selectedProduct.Quantity = 1;
+                    ClassHelper.BasketClass.Products.Add(selectedProduct);
+                }
+            }
         }
     }
 }

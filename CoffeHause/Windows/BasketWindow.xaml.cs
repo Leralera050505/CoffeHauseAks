@@ -34,28 +34,16 @@ namespace CoffeHause.Windows
 
         private void GetListProduct()
         {
+
             ObservableCollection<DB.Product> products = new ObservableCollection<DB.Product>(ClassHelper.BasketClass.Products);
             LVBasket.ItemsSource = products;
-        }
-        
-        private void BtnRemoveToCart_Click(object sender, RoutedEventArgs e)
-        {
-            Button button = sender as Button;
-            if (button == null)
+            decimal price = 0;
+            foreach (var item in products)
             {
-                return;
+                price += item.Quantity * item.Cost;
             }
-
-            var selectedProduct = button.DataContext as DB.Product;
-
-
-            if (selectedProduct != null)
-            {
-               ClassHelper.BasketClass.Products.Remove(selectedProduct);
-            }
-            GetListProduct();
+            tbAllCost.Text = price.ToString();
         }
-
         private void BtnAddToCart_Click(object sender, RoutedEventArgs e)
         {
             Button button = sender as Button;
@@ -77,40 +65,65 @@ namespace CoffeHause.Windows
 
         private void AddProduct_Click(object sender, RoutedEventArgs e)
         {
-            //try
-            //{
+            ObservableCollection<DB.Product> products= new ObservableCollection<DB.Product>(ClassHelper.BasketClass.Products);
+            if (products.Count() == 0)
+            {
+                MessageBox.Show("Корзина пуста");
+            }
+            else 
+            {
+                DB.Sale sale = new DB.Sale();
+                sale.IdWorker = (int)ClassHelper.UserDataClass.Worker.IdWorker;
+                sale.IdClient = 1;
+                sale.Date = DateTime.Now;
+                if (sale != null)
+                {
+                    ClassHelper.EFclass.Contex.Sale.Add(sale);
+                    ClassHelper.EFclass.Contex.SaveChanges();
+                }
 
-            //    DB.SaleProduct Spoduct = new DB.SaleProduct();
-            //    Spoduct.IdProduct = ClassHelper.BasketClass.Products;
-            //    Spoduct.IdSale = 
-            //    check.IDEmployee = ClassHelper.AuthUserClass.authEmploee.IDEmploee;
-            //    check.IDGuest = 1;
-            //    check.Date = DateTime.Now;
-            //    if (check != null)
-            //    {
-            //        Context.Check.Add(check);
-            //        Context.SaveChanges();
-            //    }
+                foreach (var item in ClassHelper.BasketClass.Products)
+                {
+                    DB.SaleProduct saleProduct = new DB.SaleProduct();
+                    saleProduct.IdProduct = item.IdProduct;
+                    saleProduct.Quantity= item.Quantity;
+                    saleProduct.IdSale = ClassHelper.EFclass.Contex.Sale.ToList().LastOrDefault().IdSale;
+                    ClassHelper.EFclass.Contex.SaleProduct.Add(saleProduct);
+                    ClassHelper.EFclass.Contex.SaveChanges();
+                }
+                ClassHelper.BasketClass.Products = new List<DB.Product>();
+                MessageBox.Show("Продукты успешно добавлены");
+            }
+            Close();
+        }
 
+        private void BtnRemoveToCart_Click_1(object sender, RoutedEventArgs e)
+        {
 
-            //    foreach (var item in stuffsCart)
-            //    {
-            //        DataBase.StuffList stuffList = new DataBase.StuffList();
-            //        stuffList.IDStuff = item.IDStuff;
-            //        stuffList.Quantity = item.Quantity;
-            //        stuffList.IDCheck = Context.Check.ToList().LastOrDefault().IDCheck;
-            //        Context.StuffList.Add(stuffList);
-            //        Context.SaveChanges();
-            //    }
-            //    MessageBox.Show("Продукты успешно добавлены");
-            //    ProductListWindow productListWindow = new ProductListWindow();
-            //    productListWindow.Show();
-            //    Close();
-            //}
-            //catch
-            //{
-            //    MessageBox.Show("Возникла неизвесная ошибка");
-            //}
+            Button button = sender as Button;
+            if (button == null)
+            {
+                return;
+            }
+
+            DB.Product selectedProduct = button.DataContext as DB.Product;
+
+            if (selectedProduct != null)
+            {
+                if (selectedProduct.Quantity == 1 || selectedProduct.Quantity == 0)
+                {
+                    ClassHelper.BasketClass.Products.Remove(selectedProduct);
+                }
+                else
+                {
+                    selectedProduct.Quantity--;
+                    int o = ClassHelper.BasketClass.Products.IndexOf(selectedProduct);
+                    ClassHelper.BasketClass.Products.Remove(selectedProduct);
+                    ClassHelper.BasketClass.Products.Insert(o, selectedProduct);
+                }
+
+            }
+            GetListProduct();
         }
     }
 }

@@ -23,9 +23,9 @@
             />
         <ListView Background="#483233"
             x:Name="LVProdList"
-                  Grid.Row="2"
+                  Grid.Row="1"
                   ScrollViewer.HorizontalScrollBarVisibility="Disabled"
-                   d:ItemsSource="{d:SampleData ItemCount=8}">
+                   d:ItemsSource="{d:SampleData ItemCount=8}" Margin="-10,25,10,25" Grid.RowSpan="2">
             <ListView.ItemsPanel>
                 <ItemsPanelTemplate>
                     <WrapPanel/>
@@ -45,12 +45,12 @@
                                 <Image.Source>
                                     <Binding Path="Photo">
                                         <Binding.TargetNullValue>
-                                            <ImageSource>C:\Users\User\Desktop\CoffeHause\CoffeHause\Res\free-icon-add-565761.png</ImageSource>
+                                            <ImageSource>C:\Users\IMac1\Desktop\CoffeHauseAksBel\CoffeHause\Res\no_photo.jpg</ImageSource>
                                         </Binding.TargetNullValue>
                                     </Binding>
                                 </Image.Source>
                             </Image>
-                           
+
                             <TextBlock
                                 Foreground="#FFD5AA72" Text="{Binding NameProduct}"
                                    FontSize="18"
@@ -67,7 +67,8 @@
                                     BorderThickness="0"
                                     HorizontalAlignment="Right"
                                     FontSize="20"
-                                    Margin="0 0 50 0">
+                                    Margin="0 0 50 0"
+                                    Click="BtnAddToCart_Click">
                                 <Image x:Name="___free_icon_add_565761_png" Height="40" Source="/Res/free-icon-add-565761.png" Stretch="Fill" Width="40"/>
                             </Button>
                         </StackPanel>
@@ -75,12 +76,29 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
+
         <Button
             Foreground="#FF4C2818"
             Background="#FFAA8C77"
             Content="Добавить товар"
             Grid.Row="3"
+            Width="600"
+            Height="50"
+            HorizontalAlignment="Left"
             FontSize="25"
-            x:Name="AddProduct" Click="AddProduct_Click"/>
+            x:Name="AddProduct" Click="AddProduct_Click" 
+            Grid.RowSpan="2"/>
+        <Button
+             Foreground="#FF4C2818"
+            Background="#FFAA8C77"
+            Grid.Row="3"
+            Height="50"
+            x:Name="btnBasket"
+            Width="600"
+            HorizontalAlignment="Right"
+            Grid.RowSpan="2"
+            Content="Перейти в корзину"
+            FontSize="25"
+            Click="btnBasket_Click"/>
     </Grid>
 </Window>

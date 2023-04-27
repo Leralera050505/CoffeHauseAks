@@ -1,0 +1,99 @@
+﻿<Window x:Class="CoffeHause.Windows.ReportWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CoffeHause.Windows"
+        mc:Ignorable="d"
+        Title="ReportWindow" Height="450" Width="800">
+    <Grid Background="#483233">
+        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+        <WrapPanel Grid.Row="1">
+            <TextBlock Text="Поиск"
+                       Margin="10"
+                       FontSize="15"/>
+
+            <TextBox x:Name="TxbSearch"
+                     Width="200"
+                     Height="25"
+                     FontSize="18" 
+                     VerticalContentAlignment="Center"
+                     TextChanged ="TxbSearch_TextChanged"/>
+
+            <TextBlock Text="Сортировка"
+                        Margin="10"
+                       FontSize="15"/>
+            <ComboBox x:Name="CmbSort"
+                      Width="200"
+                      Height="25" 
+                      SelectionChanged ="CmbSort_SelectionChanged"/>
+        </WrapPanel>
+
+        <TextBlock
+            Foreground="#FFD5AA72"
+            Text="Отчет покупок"
+            HorizontalAlignment="Center"
+            FontSize="25"
+            FontWeight="Bold" />
+        <ListView x:Name="listviewSale" Grid.Row="2" Background="#483233"  Foreground="#ffffff">
+            <ListView.View >
+                <GridView >
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=Клиент}" 
+                      Header="ФИО Клиента" Width="100"  />
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=Работник}" 
+                      Header="ФИО работника" Width="100"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=Дата}" 
+                      Header="Дата продажи" Width="100"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=Количество}" 
+                      Header="Количество продуктов" Width="130"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=Цена_покупки}" 
+                      Header="Цена чека" Width="100"/>
+
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Button
+            Foreground="#FF4C2818"
+            Background="#FFAA8C77"
+            Content="Добавить отчет"
+            Grid.Row="4"
+            FontSize="25"
+            x:Name="btnAddSale"
+            Width="250"
+            Height="50"
+            Grid.RowSpan="2" 
+            HorizontalAlignment="Left"
+          />
+        <Button
+            Foreground="#FF4C2818"
+            Background="#FFAA8C77"
+            Content="Удалить отчет"
+            Grid.Row="4"
+            FontSize="25"
+            x:Name="btnDelitSale"
+            Width="250"
+            Height="50"
+            HorizontalAlignment="Center" 
+            Grid.RowSpan="2"
+            />
+        <Button
+            Foreground="#FF4C2818"
+            Background="#FFAA8C77"
+            Content="Изменить"
+            Grid.Row="4"
+            FontSize="25"
+            x:Name="btnUpDateWork"
+            Width="250"
+            Height="50"
+            
+            HorizontalAlignment="Right" 
+            Grid.RowSpan="2"
+            />
+    </Grid>
+</Window>
