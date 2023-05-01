@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CoffeHause.Windows"
         mc:Ignorable="d"
-        Title="ReportWindow" Height="450" Width="800">
+        Title="ReportWindow" Height="450" Width="850">
     <Grid Background="#483233">
         
         <Grid.RowDefinitions>
@@ -16,6 +16,7 @@
         </Grid.RowDefinitions>
         <WrapPanel Grid.Row="1">
             <TextBlock Text="Поиск"
+                       Foreground="#FFD5AA72"
                        Margin="10"
                        FontSize="15"/>
 
@@ -27,19 +28,19 @@
                      TextChanged ="TxbSearch_TextChanged"/>
 
             <TextBlock Text="Сортировка"
+                       Foreground="#FFD5AA72"
                         Margin="10"
                        FontSize="15"/>
             <ComboBox x:Name="CmbSort"
                       Width="200"
                       Height="25" 
                       SelectionChanged ="CmbSort_SelectionChanged"/>
-            <DataGrid x:Name="DateO"
-                      Margin=" 10 0 0 0"
-                       AutoGenerateColumns="False"
-                  IsReadOnly="True"
-                      />
+           
             <DatePicker Name="dpFirst" Margin="0 0 0 0" />
             <DatePicker Name="dpNext" />
+            <Button x:Name="btnDate" Width="25"
+                        Content="*" 
+                    Click="btnDate_Click" Height="30"/>
         </WrapPanel>
 
         <TextBlock
