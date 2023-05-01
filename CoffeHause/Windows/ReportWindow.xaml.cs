@@ -23,6 +23,7 @@ namespace CoffeHause.Windows
     /// </summary>
     public partial class ReportWindow : Window
     {
+        string orderby = "Не выбрано";
         List<VW_SaleProduct> saleproduct = new List<VW_SaleProduct>();
         List<string> sortList = new List<string>()
         {
@@ -32,6 +33,10 @@ namespace CoffeHause.Windows
             "По предмету",
             "По группе"
         };
+        void getDate(DatePicker dateF, DatePicker dateN)
+        {
+            DateO.ItemsSource = ClassHelper.EFclass.Contex.VW_SaleProduct.ToList().Where(i => i.Дата >= dateF.SelectedDate && i.Дата <= dateN.SelectedDate);
+        }
         public ReportWindow()
         {
             InitializeComponent();
