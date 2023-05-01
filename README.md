@@ -48,6 +48,12 @@
 ![image](https://user-images.githubusercontent.com/107068589/234858042-b7995284-124e-46c1-ad0c-91a02911aa79.png)
 ![image](https://user-images.githubusercontent.com/107068589/234858139-76d2a052-0cc1-490c-a99a-e9b3bf9f8753.png)
 
+<b>Отчет</b>
+![image](https://user-images.githubusercontent.com/107068589/235470987-d1259e17-7ea7-41b2-a3ec-763242d2216e.png)
+![image](https://user-images.githubusercontent.com/107068589/235471088-07fed93c-69cb-4c67-9ca4-1a90e964d2f1.png)
+![image](https://user-images.githubusercontent.com/107068589/235471157-5a35b0b5-eaf5-44bb-99b1-a4483b4315cf.png)
+![image](https://user-images.githubusercontent.com/107068589/235471331-ae1da030-d17c-4862-9f90-55cfc370f61b.png)
+
 
 "# CoffeHauseAks" 
 
