@@ -17,6 +17,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using static CoffeHause.ClassHelper.EFclass;
 using static CoffeHause.ClassHelper.BasketClass;
+using CoffeHause.ClassHelper;
 
 namespace CoffeHause.Windows
 {
@@ -43,7 +44,37 @@ namespace CoffeHause.Windows
                 price += item.Quantity * item.Cost;
             }
             tbAllCost.Text = price.ToString();
+            DateTime datetime = new DateTime();
+            datetime = DateTime.Now;
+            DateTime testtime = new DateTime(2023, 05, 25);
+            PriceWithDiscount(products, testtime);
         }
+       public  void PriceWithDiscount(ObservableCollection<Product> products,DateTime datetime)
+        {
+         
+            decimal generalprice = 0;
+            foreach (var item in BasketClass.Products)
+            {
+                generalprice += item.Cost * item.Quantity;
+            }
+            if (datetime.DayOfWeek == DayOfWeek.Thursday)
+            {
+                for (int i = 22; i < 28; i++)
+                {
+                    if (datetime.Day == i)
+                    {
+                        generalprice = generalprice - (generalprice * (decimal)0.04);
+                    }
+                }
+            }
+
+            generalprice = Math.Round(generalprice, 2);
+            tbAllCost.Text = generalprice.ToString();
+            tbAllDiscount.Text = Math.Round((generalprice * (decimal)0.04),2).ToString();
+        }
+
+        
+
         private void BtnAddToCart_Click(object sender, RoutedEventArgs e)
         {
             Button button = sender as Button;

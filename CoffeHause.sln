@@ -5,6 +5,8 @@ VisualStudioVersion = 17.3.32901.215
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoffeHause", "CoffeHause\CoffeHause.csproj", "{3CB1288A-F37A-49A0-AA81-524D52EA82FA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PriceWithDiscountTest", "PriceWithDiscountTest\PriceWithDiscountTest.csproj", "{0B2E87F0-64F3-473E-90BF-F5B98CF28D04}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{3CB1288A-F37A-49A0-AA81-524D52EA82FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3CB1288A-F37A-49A0-AA81-524D52EA82FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3CB1288A-F37A-49A0-AA81-524D52EA82FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0B2E87F0-64F3-473E-90BF-F5B98CF28D04}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B2E87F0-64F3-473E-90BF-F5B98CF28D04}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B2E87F0-64F3-473E-90BF-F5B98CF28D04}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B2E87F0-64F3-473E-90BF-F5B98CF28D04}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

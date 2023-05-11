@@ -65,6 +65,7 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="ClassHelper\BasketClass.cs" />
+    <Compile Include="ClassHelper\DecimalClass.cs" />
     <Compile Include="ClassHelper\EFclass.cs" />
     <Compile Include="ClassHelper\Product.cs" />
     <Compile Include="ClassHelper\UserDataClass.cs" />

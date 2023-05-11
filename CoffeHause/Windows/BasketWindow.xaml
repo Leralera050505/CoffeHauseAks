@@ -120,7 +120,18 @@
                 Text="0"                
                 FontSize="30"
                    />
-
+            <TextBlock                  
+                Width="200"
+                Text="Скидка:"
+                TextAlignment="Right"
+                Padding="0 0 20 0"
+                FontSize="30"
+                   />
+            <TextBlock x:Name="tbAllDiscount"                   
+                Width="200"
+                Text="0"                
+                FontSize="30"
+                   />
         </StackPanel>
     </Grid>
 </Window>
